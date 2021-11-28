@@ -1,0 +1,39 @@
+
+<form [formGroup]="formulario">
+    <div class="row text-center mt-4">
+        <div class="col">
+            <input type="text" formControlName="nombre" class="form-control">
+        </div>
+    </div>
+    
+    <div class="row text-center mt-4">
+        <div class="col">
+            <button type="button" (click)="getPokemon()" class="btn btn-outline-primary">Buscar</button>
+        </div>
+    </div>
+
+    <div class="text-center mt-3" id="div" *ngIf="image">
+        <img src="{{ image }}" alt="" width="250" height="250" >
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Key</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nombre</td>
+                    <td>{{ name }}</td>
+                </tr>
+                <tr>
+                    <td>Tipo</td>
+                    <td>{{ type }}</td>
+                </tr>
+            </tbody>
+           
+        </table>
+    </div>
+
+    <!-- <pre class="mt-4">{{ result | json }}</pre> -->
+</form>
