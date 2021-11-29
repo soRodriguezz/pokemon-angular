@@ -24,7 +24,7 @@ export class PokemonComponent implements OnInit {
   }
 
   getPokemon() {
-    this.pokemonService.getPokemon(this.formulario.controls.nombre.value).subscribe( resp => {
+    this.pokemonService.getPokemon(this.formulario.controls.nombre.value.toLowerCase()).subscribe( resp => {
       this.result = resp;
       this.image = resp.sprites.front_default;
       this.name = resp.name;
